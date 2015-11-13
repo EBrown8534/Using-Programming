@@ -1,3 +1,12 @@
+// I have, with the help of several users on Stack Overflow (see: http://stackoverflow.com/q/33697924/4564272) found the issue with this code.
+// The compiler is making an optimization, and removing the body of the loops within this code, merely keeping the `int statement = i % 0;` line.
+// To fix this, do the following:
+//
+// Add:
+//     printf("Results: %i %i %i", results[ITERATIONS / 4], results[ITERATIONS / 2], results[ITERATIONS - 1]);
+// After each "Finished" line.
+// This will force the compiler to recognize that the `results` array *actually is* used later on.
+
 #include "stdafx.h"
 #include <stdio.h>
 #include <Windows.h>
