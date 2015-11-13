@@ -198,5 +198,8 @@ FakesAssemblies/
 # C/C++ .out files
 *.out
 
-# Zip files
+# Compressed files
 *.zip
+*.tar
+*.gz
+*.bz2
